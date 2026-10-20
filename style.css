@@ -20,7 +20,7 @@ body{
 button{
     background-color: gray;
     color: white;
-    flex-grow: 1;
+    flex: 0 0 25%;
     font-size: 20px;
 }
 
@@ -46,7 +46,6 @@ button{
 .zeile5,
 .zeile6{
     display: flex;
-    justify-content: stretch;
     flex-grow: 1;
 }
 
