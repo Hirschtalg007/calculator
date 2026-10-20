@@ -20,4 +20,45 @@ body{
 button{
     background-color: gray;
     color: white;
+    flex-grow: 1;
+    font-size: 20px;
+}
+
+.zeile1{
+    background-color: gray;
+    color: white;
+    font-size: 30px;
+    flex-grow: 2;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.zeile1 div{
+    padding-right: 5px;
+}
+
+.zeile2,
+.zeile3,
+.zeile4,
+.zeile5,
+.zeile6{
+    display: flex;
+    justify-content: stretch;
+    flex-grow: 1;
+}
+
+.zeile2 :first-child{
+    flex: 2;
+}
+
+.zeile6 :first-child{
+    border-bottom-left-radius: 15px;
+}
+
+.zeile6 :last-child{
+    border-bottom-right-radius: 15px;
+    flex: 2;
 }
