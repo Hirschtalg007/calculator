@@ -1,4 +1,14 @@
+const buttons = document.querySelectorAll("button");
+
 function operate(a,b){
+    let buttonInhalt = "";
+
+    for(let i = 0 ; i < buttons.length ; i++){
+        buttons[i].addEventListener("click",()=>{
+            buttonInhalt = buttons[i].textContent;
+            console.log(buttonInhalt);
+    })};
+
     add(a,b);
     subtract(a,b);
     multiply(a,b);
