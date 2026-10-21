@@ -1,4 +1,5 @@
 const buttons = document.querySelectorAll("button");
+const display = document.querySelector("div.display");
 
 function operate(a,b){
     let buttonInhalt = "";
@@ -6,7 +7,7 @@ function operate(a,b){
     for(let i = 0 ; i < buttons.length ; i++){
         buttons[i].addEventListener("click",()=>{
             buttonInhalt = buttons[i].textContent;
-            console.log(buttonInhalt);
+            display.textContent = buttonInhalt;
     })};
 
     add(a,b);
