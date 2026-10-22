@@ -28,17 +28,19 @@ function getNum(buttonInhalt){
             else{
                 calcData.firNum += buttonInhalt;
             }
+            display.textContent = calcData.firNum;
         }
         else{
             calcData.secNum += buttonInhalt;
+            display.textContent = calcData.secNum;
         }
     }
-
     else if(isOp.includes(buttonInhalt)){ //Check ob die Eingabe ein Operator ist
-        calcData.operator = buttonInhalt;
+        if(calcData.secNum === ""){
+            calcData.operator = buttonInhalt;
+            display.textContent = calcData.operator;
+        }
     }
-
-    display.textContent = calcData.firNum + calcData.operator + calcData.secNum;
 }
 
 function operate(a,b){
@@ -80,4 +82,6 @@ Nächste Schritte:
     - Wurde mit Objekt gelöst
 - Filtern ob Zahl oder Operator
 - 2te Zahl auf Display schreiben
+- Nach Eingabe von Operator muss erste Zahl verschwinden aber trotzdem gespeichert bleiben
+- Nach Eingabe von Operator muss Button gedrückt bleiben
 */
