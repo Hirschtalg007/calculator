@@ -18,22 +18,22 @@ function operate(a,b){
 
 function add(a, b){
     let sum = a+b;
-    console.log(sum);
+    return sum;
 }
 
 function subtract(a, b){
     let diff = a-b;
-    console.log(diff);
+    return diff;
 }
 
 function multiply(a, b){
     let prod = a*b;
-    console.log(prod);
+    return prod;
 }
 
 function divide (a, b){
     let quot = a/b;
-    console.log(quot);
+    return quot;
 }
 
 let number1 = 10;
