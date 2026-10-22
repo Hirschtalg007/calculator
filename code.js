@@ -1,5 +1,10 @@
 const buttons = document.querySelectorAll("button");
 const display = document.querySelector("div.display");
+const calcData = {
+    firNum: "",
+    secNum: "",
+    operator: "",
+};
 
 function initButton(){
     let buttonInhalt = "";
@@ -13,11 +18,12 @@ function initButton(){
 
 function getNum(buttonInhalt){
     if(display.textContent === "0"){
-        display.textContent = buttonInhalt;
+        calcData.firNum = buttonInhalt;
     }
     else{
-        display.textContent += buttonInhalt;
+        calcData.firNum += buttonInhalt;
     }
+    display.textContent = calcData.firNum;
 }
 
 function operate(a,b){
