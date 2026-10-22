@@ -17,15 +17,24 @@ function initButton(){
 }
 
 function getNum(buttonInhalt){
-    const isNum = [1,2,3,4,5,6,7,8,9];
+    const isNum = ["0","1","2","3","4","5","6","7","8","9"];
     const isOp = ["-","+","*","/"];
-    if(display.textContent === "0"){
-        calcData.firNum = buttonInhalt;
-    }
-    else{
-        calcData.firNum += buttonInhalt;
+
+    if(isNum.includes(buttonInhalt)){
+        if(display.textContent === "0"){
+            calcData.firNum = buttonInhalt;
+        }
+        else{
+            calcData.firNum += buttonInhalt;
+        }
+        display.textContent = calcData.firNum;
+        }
+    else if(isOp.includes(buttonInhalt)){
+        calcData.operator = buttonInhalt;
+        console.log("Operator gedrückt");
     }
     display.textContent = calcData.firNum;
+
 }
 
 function operate(a,b){
