@@ -21,20 +21,24 @@ function getNum(buttonInhalt){
     const isOp = ["-","+","*","/"];
 
     if(isNum.includes(buttonInhalt)){ //Check ob die Eingabe eine Zahl ist
-        if(display.textContent === "0"){
-            calcData.firNum = buttonInhalt;
+        if(calcData.operator == ""){
+            if(display.textContent === "0"){
+                calcData.firNum = buttonInhalt;
+            }
+            else{
+                calcData.firNum += buttonInhalt;
+            }
         }
         else{
-            calcData.firNum += buttonInhalt;
+            calcData.secNum += buttonInhalt;
         }
-        display.textContent = calcData.firNum;
-        }
+    }
+
     else if(isOp.includes(buttonInhalt)){ //Check ob die Eingabe ein Operator ist
         calcData.operator = buttonInhalt;
-        console.log("Operator gedrückt");
     }
-    display.textContent = calcData.firNum;
 
+    display.textContent = calcData.firNum + calcData.operator + calcData.secNum;
 }
 
 function operate(a,b){
