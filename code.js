@@ -6,8 +6,14 @@ function operate(a,b){
 
     for(let i = 0 ; i < buttons.length ; i++){
         buttons[i].addEventListener("click",()=>{
-            buttonInhalt = buttons[i].textContent;
-            display.textContent = buttonInhalt;
+            if(display.textContent === "0"){
+                buttonInhalt = buttons[i].textContent;
+                display.textContent=buttonInhalt;
+            }
+            else{
+                buttonInhalt = buttons[i].textContent;
+                display.textContent += buttonInhalt;
+            }
     })};
 
     add(a,b);
