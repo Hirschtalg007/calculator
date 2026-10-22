@@ -1,7 +1,7 @@
 const buttons = document.querySelectorAll("button");
 const display = document.querySelector("div.display");
 
-function operate(a,b){
+function initButton(){
     let buttonInhalt = "";
 
     for(let i = 0 ; i < buttons.length ; i++){
@@ -15,7 +15,9 @@ function operate(a,b){
                 display.textContent += buttonInhalt;
             }
     })};
+}
 
+function operate(a,b){
     add(a,b);
     subtract(a,b);
     multiply(a,b);
@@ -45,4 +47,5 @@ function divide (a, b){
 let number1 = 10;
 let number2 = 2;
 
+initButton();
 operate(number1,number2);
