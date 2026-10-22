@@ -9,7 +9,7 @@ const calcData = {
 function initButton(){
     let buttonInhalt = "";
 
-    for(let i = 0 ; i < buttons.length ; i++){
+    for(let i = 0 ; i < buttons.length ; i++){ //Buttons eventListener hinzufügen
         buttons[i].addEventListener("click",()=>{
             buttonInhalt = buttons[i].textContent;
             getNum(buttonInhalt);
@@ -20,7 +20,7 @@ function getNum(buttonInhalt){
     const isNum = ["0","1","2","3","4","5","6","7","8","9"];
     const isOp = ["-","+","*","/"];
 
-    if(isNum.includes(buttonInhalt)){
+    if(isNum.includes(buttonInhalt)){ //Check ob die Eingabe eine Zahl ist
         if(display.textContent === "0"){
             calcData.firNum = buttonInhalt;
         }
@@ -29,7 +29,7 @@ function getNum(buttonInhalt){
         }
         display.textContent = calcData.firNum;
         }
-    else if(isOp.includes(buttonInhalt)){
+    else if(isOp.includes(buttonInhalt)){ //Check ob die Eingabe ein Operator ist
         calcData.operator = buttonInhalt;
         console.log("Operator gedrückt");
     }
@@ -68,4 +68,12 @@ let number1 = 10;
 let number2 = 2;
 
 initButton();
-operate(number1,number2);
+
+/*
+Nächste Schritte:
+- Neue Funktion mit getNum erstellen
+- 3 Variablen erstellen (Nummer 1, Operator und Nummer 2)
+    - Wurde mit Objekt gelöst
+- Filtern ob Zahl oder Operator
+- 2te Zahl auf Display schreiben
+*/
