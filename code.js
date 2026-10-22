@@ -6,15 +6,18 @@ function initButton(){
 
     for(let i = 0 ; i < buttons.length ; i++){
         buttons[i].addEventListener("click",()=>{
-            if(display.textContent === "0"){
-                buttonInhalt = buttons[i].textContent;
-                display.textContent=buttonInhalt;
-            }
-            else{
-                buttonInhalt = buttons[i].textContent;
-                display.textContent += buttonInhalt;
-            }
+            buttonInhalt = buttons[i].textContent;
+            getNum(buttonInhalt);
     })};
+}
+
+function getNum(buttonInhalt){
+    if(display.textContent === "0"){
+        display.textContent = buttonInhalt;
+    }
+    else{
+        display.textContent += buttonInhalt;
+    }
 }
 
 function operate(a,b){
