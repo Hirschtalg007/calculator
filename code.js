@@ -17,6 +17,8 @@ function initButton(){
 }
 
 function getNum(buttonInhalt){
+    const isNum = [1,2,3,4,5,6,7,8,9];
+    const isOp = ["-","+","*","/"];
     if(display.textContent === "0"){
         calcData.firNum = buttonInhalt;
     }
