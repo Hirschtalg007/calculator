@@ -73,29 +73,29 @@ function operate(){
 }
 
 function add(a, b){
-    let sum = a+b;
-    calcData.firNum = sum.toFixed(2);
+    let sum = Math.round((a+b)*100)/100;
+    calcData.firNum = sum;
     calcData.secNum ="";
     display.textContent = calcData.firNum;
 }
 
 function subtract(a, b){
-    let diff = a-b;
-    calcData.firNum = diff.toFixed(2);
+    let diff = Math.round((a-b)*100)/100;
+    calcData.firNum = diff;
     calcData.secNum ="";
     display.textContent = calcData.firNum;
 }
 
 function multiply(a, b){
-    let prod = a*b;
-    calcData.firNum = prod.toFixed(2);
+    let prod = Math.round((a*b)*100)/100;
+    calcData.firNum = prod;
     calcData.secNum ="";
     display.textContent = calcData.firNum;
 }
 
 function divide (a, b){
-    let quot = a/b;
-    calcData.firNum = quot.toFixed(2);
+    let quot = Math.round((a/b)*100)/100;
+    calcData.firNum = quot;
     calcData.secNum ="";
     display.textContent = calcData.firNum;
 }
@@ -116,6 +116,7 @@ Erledigt:
 - Mehrere Rechnungen mit einem Aufruf möglich machen
 - Clear Button in Code adaptieren
 - Ergebnis muss auf 2 Kommastellen begrenzt werden
+- Check ob korrekte Dateneingabe vorhanden bevor = Button ausgeführt wird
 
 Offen:
 - Nach Eingabe von Operator muss Button gedrückt bleiben und nicht auf Display angezeigt werden
