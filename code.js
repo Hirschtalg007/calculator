@@ -94,10 +94,18 @@ function multiply(a, b){
 }
 
 function divide (a, b){
-    let quot = Math.round((a/b)*100)/100;
-    calcData.firNum = quot;
-    calcData.secNum ="";
-    display.textContent = calcData.firNum;
+    if(b === 0){
+        calcData.firNum = "";
+        calcData.operator = "";
+        calcData.secNum = "";
+        display.textContent = "Click Clear and try again ;)"
+    }
+    else{
+        let quot = Math.round((a/b)*100)/100;
+        calcData.firNum = quot;
+        calcData.secNum ="";
+        display.textContent = calcData.firNum;
+    }  
 }
 
 initButton();
@@ -117,8 +125,13 @@ Erledigt:
 - Clear Button in Code adaptieren
 - Ergebnis muss auf 2 Kommastellen begrenzt werden
 - Check ob korrekte Dateneingabe vorhanden bevor = Button ausgeführt wird
+- Division durch 0 sperren
 
 Offen:
+- Rechenvorgänge laut Beschreibung in Odin adaptieren
 - Nach Eingabe von Operator muss Button gedrückt bleiben und nicht auf Display angezeigt werden
-
+- Tastatureingabe ermöglichen
+- Wenn Ergebnis angezeigt wird und nur eine Taste gedrückt wird, dann werden bestehende Daten gelöscht und eine neue Rechnung gestartet
+- Sperren das mehr als ein Komma eingegeben werden kann
+- Löschen Taste Funktion geben um letzte Eingabe rückgängig zu machen, wenn nach = löschen gedrückt wird, dann ist die Funktion wie clear
 */
