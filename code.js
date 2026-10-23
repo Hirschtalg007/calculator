@@ -47,11 +47,20 @@ function getNum(buttonInhalt){
 }
 
 function operate(){
-    console.log("TEST")
-    //add(a,b);
-    //subtract(a,b);
-    //multiply(a,b);
-    //divide(a,b);
+    switch(calcData.operator){
+        case "+":
+            add();
+            break;
+        case "-":
+            subtract();
+            break;
+        case "*":
+            multiply();
+            break;
+        case "/":
+            divide();
+            break;
+    }
 }
 
 function add(a, b){
@@ -88,7 +97,9 @@ Erledigt:
 - 2te Zahl auf Display schreiben
 - Nach Eingabe von Operator muss erste Zahl verschwinden aber trotzdem gespeichert bleiben
 - Operate Funktion nach Klick auf "=" aufrufen
+- Rechenfunktionen mit Operate Funktion verknüpft
 
 Offen:
+- 
 - Nach Eingabe von Operator muss Button gedrückt bleiben
 */
