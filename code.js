@@ -41,10 +41,10 @@ function getNum(buttonInhalt){
             display.textContent = calcData.operator;
         }
     }
-    else if(buttonInhalt == "="){ //Check ob die Eingabe = ist
+    else if(buttonInhalt === "=" && calcData.secNum != ""){ //Check ob die Eingabe = ist und ob alle Daten vorhanden sind
         operate();
     }
-    else if(buttonInhalt == "Clear"){
+    else if(buttonInhalt === "Clear"){
         display.textContent = "0";
         calcData.firNum = "";
         calcData.secNum = "";
