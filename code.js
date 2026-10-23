@@ -41,7 +41,7 @@ function getNum(buttonInhalt){
             display.textContent = calcData.operator;
         }
     }
-    else if(buttonInhalt == "="){
+    else if(buttonInhalt == "="){ //Check ob die Eingabe = ist
         operate();
     }
 }
@@ -69,24 +69,28 @@ function operate(){
 function add(a, b){
     let sum = a+b;
     calcData.firNum = sum;
+    calcData.secNum ="";
     display.textContent = calcData.firNum;
 }
 
 function subtract(a, b){
     let diff = a-b;
     calcData.firNum = diff;
+    calcData.secNum ="";
     display.textContent = calcData.firNum;
 }
 
 function multiply(a, b){
     let prod = a*b;
     calcData.firNum = prod;
+    calcData.secNum ="";
     display.textContent = calcData.firNum;
 }
 
 function divide (a, b){
     let quot = a/b;
     calcData.firNum = quot;
+    calcData.secNum ="";
     display.textContent = calcData.firNum;
 }
 
@@ -103,8 +107,10 @@ Erledigt:
 - Operate Funktion nach Klick auf "=" aufrufen
 - Rechenfunktionen mit Operate Funktion verknüpft
 - Rechenergebnisse auf Display anzeigen lassen
+- Mehrere Rechnungen mit einem Aufruf möglich machen
 
 Offen:
-
-- Nach Eingabe von Operator muss Button gedrückt bleiben
+- Clear Button in Code adaptieren
+- Nach Eingabe von Operator muss Button gedrückt bleiben und nicht auf Display angezeigt werden
+- Ergebnis muss auf 2 Kommastellen begrenzt werden
 */
