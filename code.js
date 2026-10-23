@@ -74,28 +74,28 @@ function operate(){
 
 function add(a, b){
     let sum = a+b;
-    calcData.firNum = sum;
+    calcData.firNum = sum.toFixed(2);
     calcData.secNum ="";
     display.textContent = calcData.firNum;
 }
 
 function subtract(a, b){
     let diff = a-b;
-    calcData.firNum = diff;
+    calcData.firNum = diff.toFixed(2);
     calcData.secNum ="";
     display.textContent = calcData.firNum;
 }
 
 function multiply(a, b){
     let prod = a*b;
-    calcData.firNum = prod;
+    calcData.firNum = prod.toFixed(2);
     calcData.secNum ="";
     display.textContent = calcData.firNum;
 }
 
 function divide (a, b){
     let quot = a/b;
-    calcData.firNum = quot;
+    calcData.firNum = quot.toFixed(2);
     calcData.secNum ="";
     display.textContent = calcData.firNum;
 }
@@ -115,8 +115,9 @@ Erledigt:
 - Rechenergebnisse auf Display anzeigen lassen
 - Mehrere Rechnungen mit einem Aufruf möglich machen
 - Clear Button in Code adaptieren
+- Ergebnis muss auf 2 Kommastellen begrenzt werden
 
 Offen:
 - Nach Eingabe von Operator muss Button gedrückt bleiben und nicht auf Display angezeigt werden
-- Ergebnis muss auf 2 Kommastellen begrenzt werden
+
 */
