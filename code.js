@@ -47,44 +47,44 @@ function getNum(buttonInhalt){
 }
 
 function operate(){
+    let num1 = parseFloat(calcData.firNum);
+    let num2 = parseFloat(calcData.secNum);
+
     switch(calcData.operator){
         case "+":
-            add();
+            add(num1, num2);
             break;
         case "-":
-            subtract();
+            subtract(num1, num2);
             break;
         case "*":
-            multiply();
+            multiply(num1, num2);
             break;
         case "/":
-            divide();
+            divide(num1, num2);
             break;
     }
 }
 
 function add(a, b){
     let sum = a+b;
-    return sum;
+    console.log(sum);
 }
 
 function subtract(a, b){
     let diff = a-b;
-    return diff;
+    console.log(diff);
 }
 
 function multiply(a, b){
     let prod = a*b;
-    return prod;
+    console.log(prod);
 }
 
 function divide (a, b){
     let quot = a/b;
-    return quot;
+    console.log(quot);
 }
-
-let number1 = 10;
-let number2 = 2;
 
 initButton();
 
