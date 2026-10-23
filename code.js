@@ -17,7 +17,7 @@ function initButton(){
 }
 
 function getNum(buttonInhalt){
-    const isNum = ["0","1","2","3","4","5","6","7","8","9"];
+    const isNum = [".","0","1","2","3","4","5","6","7","8","9"];
     const isOp = ["-","+","*","/"];
 
     if(isNum.includes(buttonInhalt)){ //Check ob die Eingabe eine Zahl ist
@@ -41,13 +41,17 @@ function getNum(buttonInhalt){
             display.textContent = calcData.operator;
         }
     }
+    else if(buttonInhalt == "="){
+        operate();
+    }
 }
 
-function operate(a,b){
-    add(a,b);
-    subtract(a,b);
-    multiply(a,b);
-    divide(a,b);
+function operate(){
+    console.log("TEST")
+    //add(a,b);
+    //subtract(a,b);
+    //multiply(a,b);
+    //divide(a,b);
 }
 
 function add(a, b){
@@ -76,12 +80,15 @@ let number2 = 2;
 initButton();
 
 /*
-Nächste Schritte:
+Erledigt:
 - Neue Funktion mit getNum erstellen
 - 3 Variablen erstellen (Nummer 1, Operator und Nummer 2)
     - Wurde mit Objekt gelöst
 - Filtern ob Zahl oder Operator
 - 2te Zahl auf Display schreiben
 - Nach Eingabe von Operator muss erste Zahl verschwinden aber trotzdem gespeichert bleiben
+- Operate Funktion nach Klick auf "=" aufrufen
+
+Offen:
 - Nach Eingabe von Operator muss Button gedrückt bleiben
 */
