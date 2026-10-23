@@ -44,6 +44,12 @@ function getNum(buttonInhalt){
     else if(buttonInhalt == "="){ //Check ob die Eingabe = ist
         operate();
     }
+    else if(buttonInhalt == "Clear"){
+        display.textContent = "0";
+        calcData.firNum = "";
+        calcData.secNum = "";
+        calcData.operator = "";
+    }
 }
 
 function operate(){
@@ -108,9 +114,9 @@ Erledigt:
 - Rechenfunktionen mit Operate Funktion verknüpft
 - Rechenergebnisse auf Display anzeigen lassen
 - Mehrere Rechnungen mit einem Aufruf möglich machen
+- Clear Button in Code adaptieren
 
 Offen:
-- Clear Button in Code adaptieren
 - Nach Eingabe von Operator muss Button gedrückt bleiben und nicht auf Display angezeigt werden
 - Ergebnis muss auf 2 Kommastellen begrenzt werden
 */
