@@ -68,22 +68,26 @@ function operate(){
 
 function add(a, b){
     let sum = a+b;
-    console.log(sum);
+    calcData.firNum = sum;
+    display.textContent = calcData.firNum;
 }
 
 function subtract(a, b){
     let diff = a-b;
-    console.log(diff);
+    calcData.firNum = diff;
+    display.textContent = calcData.firNum;
 }
 
 function multiply(a, b){
     let prod = a*b;
-    console.log(prod);
+    calcData.firNum = prod;
+    display.textContent = calcData.firNum;
 }
 
 function divide (a, b){
     let quot = a/b;
-    console.log(quot);
+    calcData.firNum = quot;
+    display.textContent = calcData.firNum;
 }
 
 initButton();
@@ -98,8 +102,9 @@ Erledigt:
 - Nach Eingabe von Operator muss erste Zahl verschwinden aber trotzdem gespeichert bleiben
 - Operate Funktion nach Klick auf "=" aufrufen
 - Rechenfunktionen mit Operate Funktion verknüpft
+- Rechenergebnisse auf Display anzeigen lassen
 
 Offen:
-- 
+
 - Nach Eingabe von Operator muss Button gedrückt bleiben
 */
